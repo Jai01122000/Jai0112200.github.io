@@ -1,0 +1,102 @@
+<!Doctype html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title1> GPA</title1>
+ <title2>Calculator</title2>
+ <title3>For ECE Department</title3>
+ <link rel="stylesheet" href="stylesheet.css">
+ </head>
+ <body>
+ <div class="header"> GPA Calculator</div>
+ 
+ <div class="main">
+ <form>
+ <table style="width:100%">
+ <tr class=>
+ <th>Subject code</th>
+ <th>Subject name</th>
+ <th>Grade</th>
+ </tr>
+ <tr>
+ <th></th>
+ <th>Professional Elective-4</th>
+ <th><input type="text" ID="a" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th></th>
+ <th>Professional Elective-5</th>
+ <th><input type="text" ID="b" placeholder="Grade" required="required"></th>
+ </tr>
+ 
+ <th>EC8811</th>
+ <th>Project Work</th>
+ <th><input type="text" ID="c" placeholder="Grade" required="required"></th>
+ </tr>
+ </table>
+ 
+ 
+ 
+ <input class="button" type="submit" value="Calculate GPA" id="result" onclick="gpacalc()">
+ <h4 id="answer"></h4>
+ <p></p>
+ <script>
+ function gpacalc() {
+ var j=document.getElementById("a").value; 
+ var k=document.getElementById("b").value; 
+ var l=document.getElementById("c").value; 
+ 
+ 
+ 
+ var s=gradepoint(j);
+ var t=gradepoint(k);
+ var u=gradepoint(l);
+ ;
+ 
+
+ var gpa=0;
+ gpa=((3*s)+(3*t)+(10*u))/16;
+ alert("Your GPA is "+gpa.toFixed(2));
+ document.getElementById("answer").innerHTML="Your GPA is "+gpa.toFixed(2);
+
+
+ function gradepoint(grade) {
+ if ((grade=== 'O') || (grade==='o')) {
+ return 10;
+ }
+ else if ((grade=== 'A+')||(grade==='a+')) {
+ return 9;
+ }
+ else if ((grade=== 'A')||(grade==='a')) {
+ return 8;
+ }
+ else if ((grade=== 'B+')||(grade==='b+')) {
+ return 7;
+ }
+ else if ((grade=== 'B')||(grade==='b')) {
+ return 6;
+ }
+ else if ((grade=== "RA")||(grade==="ra")||(grade==="SA")||(grade==="sa")||(grade==="W")||(grade==="w")) {
+ return 0;
+ }
+ else {
+ alert("Invalid Input!");
+ }
+ }
+}
+ </script>
+ </form>
+ 
+ </div>
+ 
+ <div class="footer">
+ <div class="footer-logo">By Jai & Harsha</div>
+ <div class="footer-list">
+ <ul>
+ <li><a href="mailto:harsha.par13@gmail.com">Harshavardhini P</a></li>
+ <li><a href="mailto:kjai6935@gmail.com">Jai Kumar S D</a></li>
+ </ul>
+ </div>
+ </div>
+ </body>
+</html>
