@@ -23,4 +23,8 @@ body {
 .footer {
   background-color:#663399;
   height:90px;
+  font-size:15px;
+}
+.footer-logo {
+  color:white;
 }
