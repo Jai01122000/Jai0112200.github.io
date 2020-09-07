@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title1> GPA</title1>
+ <title2>Calculator</title2>
+ <title3>For ECE Department</title3>
+ <link rel="stylesheet" href="stylesheet.css">
+ </head>
+ <body>
+ <div class="header"> GPA Calculator</div>
+ 
+ <div class="main">
+ <form>
+ <table style="width:100%">
+ <tr class=>
+ <th>Subject code</th>
+ <th>Subject name</th>
+ <th>Grade</th>
+ </tr>
+ <tr>
+ <th>MA8451</th>
+ <th>Probability and Random Processes</th>
+ <th><input type="text" ID="a" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8452</th>
+ <th>Electronic Circuits-2</th>
+ <th><input type="text" ID="b" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8491</th>
+ <th>Communication Theory</th>
+ <th><input type="text" ID="c" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8451</th>
+ <th>Electromagnetic Fields</th>
+ <th><input type="text" ID="d" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8453</th>
+ <th>Linear Integrated Circuits</th>
+ <th><input type="text" ID="e" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>GE8291</th>
+ <th>Environmental Science and Engineering</th>
+ <th><input type="text" ID="f" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8461</th>
+ <th>Circuit Design and Simulation Laboratory </th>
+ <th><input type="text" ID="g" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8462</th>
+ <th>Linear Integrated Circuits Laboratory</th>
+ <th><input type="text" ID="h"placeholder="Grade" required="required"></th>
+ </tr>
+ </table>
+ 
+ 
+ 
+ <input class="button" type="submit" value="Calculate GPA" id="result" onclick="gpacalc()">
+ <h4 id="answer"></h4>
+ <p></p>
+ <script>
+ function gpacalc() {
+ var j=document.getElementById("a").value; 
+ var k=document.getElementById("b").value; 
+ var l=document.getElementById("c").value; 
+ var m=document.getElementById("d").value; 
+ var n=document.getElementById("e").value; 
+ var o=document.getElementById("f").value; 
+ var p=document.getElementById("g").value; 
+ var q=document.getElementById("h").value; 
+ 
+ var s=gradepoint(j);
+ var t=gradepoint(k);
+ var u=gradepoint(l);
+ var v=gradepoint(m);
+ var w=gradepoint(n);
+ var x=gradepoint(o);
+ var y=gradepoint(p);
+ var z=gradepoint
