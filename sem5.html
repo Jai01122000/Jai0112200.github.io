@@ -1,0 +1,140 @@
+<!Doctype html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title1> GPA</title1>
+ <title2>Calculator</title2>
+ <title3>For ECE Department</title3>
+ <link rel="stylesheet" href="stylesheet.css">
+ </head>
+ <body>
+ <div class="header"> GPA Calculator</div>
+ 
+ <div class="main">
+ <form>
+ <table style="width:100%">
+ <tr class=>
+ <th>Subject code</th>
+ <th>Subject name</th>
+ <th>Grade</th>
+ </tr>
+ <tr>
+ <th>EC8501</th>
+ <th>Digital Communication</th>
+ <th><input type="text" ID="a" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8553</th>
+ <th>Discrete-Time Signal Processing</th>
+ <th><input type="text" ID="b" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8552</th>
+ <th>Computer Architecture and Organisation</th>
+ <th><input type="text" ID="c" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8551</th>
+ <th>Communication Networks</th>
+ <th><input type="text" ID="d" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th></th>
+ <th>Professional Elective-1</th>
+ <th><input type="text" ID="e" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th></th>
+ <th>Open Elective-1</th>
+ <th><input type="text" ID="f" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8562</th>
+ <th>Digital Signal Processing Laboratory</th>
+ <th><input type="text" ID="g" placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8561</th>
+ <th>Communication Systems Laboratory</th>
+ <th><input type="text" ID="h"placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+ <th>EC8563</th>
+ <th>Communication Networks Laboratory</th>
+ <th><input type="text" ID="i"placeholder="Grade" required="required"></th>
+ </tr>
+ </table>
+ 
+ 
+ 
+ <input class="button" type="submit" value="Calculate GPA" id="result" onclick="gpacalc()">
+ <h4 id="answer"></h4>
+ <p></p>
+ <script>
+ function gpacalc() {
+ var j=document.getElementById("a").value; 
+ var k=document.getElementById("b").value; 
+ var l=document.getElementById("c").value; 
+ var m=document.getElementById("d").value; 
+ var n=document.getElementById("e").value; 
+ var o=document.getElementById("f").value; 
+ var p=document.getElementById("g").value; 
+ var q=document.getElementById("h").value;
+ var r=document.getElementById("i").value;
+ 
+ var s=gradepoint(j);
+ var t=gradepoint(k);
+ var u=gradepoint(l);
+ var v=gradepoint(m);
+ var w=gradepoint(n);
+ var x=gradepoint(o);
+ var y=gradepoint(p);
+ var z=gradepoint(q);
+ var ab=gradepoint(r); 
+
+ var gpa=0;
+ gpa=((3*s)+(4*t)+(3*u)+(3*v)+(3*w)+(3*x)+(2*y)+(2*z)+(2*ab))/25;
+ alert("Your GPA is "+gpa.toFixed(2));
+ document.getElementById("answer").innerHTML="Your GPA is "+gpa.toFixed(2);
+
+
+ function gradepoint(grade) {
+ if ((grade=== 'O') || (grade==='o')) {
+ return 10;
+ }
+ else if ((grade=== 'A+')||(grade==='a+')) {
+ return 9;
+ }
+ else if ((grade=== 'A')||(grade==='a')) {
+ return 8;
+ }
+ else if ((grade=== 'B+')||(grade==='b+')) {
+ return 7;
+ }
+ else if ((grade=== 'B')||(grade==='b')) {
+ return 6;
+ }
+ else if ((grade=== "RA")||(grade==="ra")||(grade==="SA")||(grade==="sa")||(grade==="W")||(grade==="w")) {
+ return 0;
+ }
+ else {
+ alert("Invalid Input!");
+ }
+ }
+}
+ </script>
+ </form>
+ 
+ </div>
+ 
+ <div class="footer">
+ <div class="footer-logo">By Jai & Harsha</div>
+ <div class="footer-list">
+ <ul>
+ <li><a href="mailto:harsha.par13@gmail.com">Harshavardhini P</a></li>
+ <li><a href="mailto:kjai6935@gmail.com">Jai Kumar S D</a></li>
+ </ul>
+ </div>
+ </div>
+ </body>
+</html>
