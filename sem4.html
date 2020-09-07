@@ -86,8 +86,8 @@
  var z=gradepoint(q);
    var gpa=0;
  gpa=((4*s)+(3*t)+(3*u)+(4*v)+(3*w)+(3*x)+(2*y)+(2*z))/24;
- alert("Your GPA is "+gpa);
- document.getElementById("answer").innerHTML="Your GPA is "+gpa;
+ alert("Your GPA is "+gpa.tofixed(2));
+ document.getElementById("answer").innerHTML="Your GPA is "+gpa.tofixed(2);
 
 
  function gradepoint(grade) {
