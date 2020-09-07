@@ -19,43 +19,48 @@
  <th>Grade</th>
  </tr>
  <tr>
- <th>HS8251</th>
- <th>Technical English</th>
+ <th>MA8352</th>
+ <th>Linear Algebra and partial Differential Equations</th>
  <th><input type="text" ID="a" placeholder="Grade" required="required"></th>
  </tr>
  <tr>
- <th>MA8251</th>
- <th>Engineering Mathematics-2</th>
+ <th>EC8393</th>
+ <th>Fundamentals of Data Structre in C </th>
  <th><input type="text" ID="b" placeholder="Grade" required="required"></th>
  </tr>
  <tr>
- <th>PH8253</th>
- <th>Physics for Electronics Engineering </th>
+ <th>EC8351</th>
+ <th>Electronic Circuits-1 </th>
  <th><input type="text" ID="c" placeholder="Grade" required="required"></th>
  </tr>
  <tr>
- <th>BE8254</th>
- <th>Basic Electrical and Instrumentation Engineering </th>
+ <th>EC8352</th>
+ <th>Signals and Systems</th>
  <th><input type="text" ID="d" placeholder="Grade" required="required"></th>
  </tr>
  <tr>
- <th>EC8251</th>
- <th>Circuit Analysis</th>
+ <thEC8392</th>
+ <th>Digital Electronics </th>
  <th><input type="text" ID="e" placeholder="Grade" required="required"></th>
  </tr>
  <tr>
- <th>EC8252</th>
- <th>Electronic Devices</th>
+ <th>EC8391</th>
+ <th>Control System Engineering </th>
  <th><input type="text" ID="f" placeholder="Grade" required="required"></th>
  </tr>
  <tr>
- <th>EC8261</th>
- <th>Circuit and Devices Laboratory </th>
+ <th>EC8381</th>
+ <th>Fundamentals of Data Structures in C Laboratory </th>
  <th><input type="text" ID="g" placeholder="Grade" required="required"></th>
  </tr>
  <tr>
- <th>GE8261</th>
- <th>Engineering Practices Laboratory </th>
+ <th>EC8361</th>
+ <th>Analog and Digital Circuits Laboratory </th>
+ <th><input type="text" ID="h"placeholder="Grade" required="required"></th>
+ </tr>
+ <tr>
+  <th>HS8381</th>
+ <th>Interpersonal Skills/Listening & Speaking </th>
  <th><input type="text" ID="h"placeholder="Grade" required="required"></th>
  </tr>
  </table>
@@ -74,7 +79,8 @@
  var n=document.getElementById("e").value; 
  var o=document.getElementById("f").value; 
  var p=document.getElementById("g").value; 
- var q=document.getElementById("h").value; 
+ var q=document.getElementById("h").value;
+ var r=document.getElementById("i").value;
  
  var s=gradepoint(j);
  var t=gradepoint(k);
@@ -84,9 +90,10 @@
  var x=gradepoint(o);
  var y=gradepoint(p);
  var z=gradepoint(q);
+ var a=gradepoint(r); 
 
  var gpa=0;
- gpa=((4*s)+(4*t)+(3*u)+(3*v)+(4*w)+(3*x)+(2*y)+(2*z))/25;
+ gpa=((4*s)+(3*t)+(3*u)+(4*v)+(3*w)+(3*x)+(2*y)+(2*z)+(1*a))/25;
  alert("Your GPA is "+gpa);
  document.getElementById("answer").innerHTML="Your GPA is "+gpa;
 
